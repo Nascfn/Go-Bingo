@@ -7,6 +7,11 @@ import (
 )
 
 func createGameHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+
 	game := logic.NewGame()
-	// Add game to a global list or store
+
+	// game do paul safadinho
 }
